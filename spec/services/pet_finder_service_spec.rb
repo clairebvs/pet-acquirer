@@ -8,13 +8,13 @@ describe PetFinderService do
   end
 
   context "instance methods" do
-    context "#picture" do
+    context "#pictures" do
       it "returns a hash with picture data" do
         data_picture = subject.pictures
 
-        expect(data_picture).to have_key :media
-        expect(data_picture).to have_key :breeds
-        expect(data_picture).to have_key :name
+        expect(data_picture[:pet]).to have_key :media
+        expect(data_picture[:pet]).to have_key :breeds
+        expect(data_picture[:pet]).to have_key :name
       end
     end
   end
