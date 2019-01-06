@@ -23,7 +23,6 @@ group :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'shoulda-matchers'
   gem 'pry'
   gem 'simplecov'
   gem 'database_cleaner'
