@@ -10,7 +10,7 @@ describe PictureFacade do
   context 'instance methods' do
     context '#random_picture' do
       it 'returns a random picture' do
-        expect(subject.random_picture.first).to be_a(Picture)
+        expect(subject.random_picture).to be_a(Picture)
       end
     end
   end
