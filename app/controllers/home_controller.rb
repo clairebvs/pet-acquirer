@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @picture_day = Picture.find_random_picture
+    @picture_day = PictureFacade.new
   end
 end
