@@ -4,4 +4,9 @@ class PictureFacade
       Picture.new(result)
     end
   end
+
+  private
+  def service
+    PetFinderService.new
+  end
 end
