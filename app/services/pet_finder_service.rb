@@ -1,13 +1,21 @@
 class PetFinderService
   def pictures
-    @conn = Faraday.new(url: "http://api.petfinder.com") do |faraday|
+    @pictures ||= get_json("pet.getRandom?key=#{api_key}&format=json&output=basic")[:petfinder]
+  end
+
+  private
+
+  def conn
+    Faraday.new(url: "http://api.petfinder.com") do |faraday|
       faraday.adapter Faraday.default_adapter
     end
+  end
 
-    api_key = ENV["pet_api_key"]
+  def get_json(url)
+    JSON.parse(conn.get(url).body, symbolize_names: true)
+  end
 
-    response = @conn.get("pet.getRandom?key=#{api_key}&format=json&output=basic")
-
-    results = JSON.parse(response.body, symbolize_names: true)[:petfinder]
+  def api_key
+    ENV["pet_api_key"]
   end
 end
