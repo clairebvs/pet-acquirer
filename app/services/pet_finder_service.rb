@@ -1,6 +1,6 @@
 class PetFinderService
   def pictures
-    @pictures ||= get_json("pet.getRandom?key=#{api_key}&format=json&output=basic")[:petfinder]
+   get_json("pet.getRandom?key=#{api_key}&format=json&output=basic")["petfinder"]
   end
 
   private
@@ -12,7 +12,7 @@ class PetFinderService
   end
 
   def get_json(url)
-    JSON.parse(conn.get(url).body, symbolize_names: true)
+    JSON.parse(conn.get(url).body)
   end
 
   def api_key
