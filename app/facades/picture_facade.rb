@@ -1,8 +1,6 @@
 class PictureFacade
   def random_picture
-    @random_picture ||= service.pictures.map do |pet, result|
-      Picture.new(result)
-    end
+    Picture.new(service.pictures["pet"])
   end
 
   private
