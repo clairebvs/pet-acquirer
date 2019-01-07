@@ -1,0 +1,61 @@
+.random_picture {
+  display: block;
+  position: absolute;
+}
+
+background {
+  position: absolute;
+}
+
+.navbar {
+  height: 55px;
+  font-size: 30px;
+  font-family: 'Pacifico';
+  color: #410BAC;
+  padding-left: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: solid;
+  border-bottom-color: grey;
+
+}
+
+.hero {
+  display: block;
+  height: 500px;
+  background-image: url("https://d17fnq9dkz9hgj.cloudfront.net/uploads/2017/06/why-are-dogs-scared-of-firework-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-inner {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.search-card {
+  background-color: white;
+}
+
+.search-button {
+  margin-top: 10px;
+  background-color: #410BAC;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
