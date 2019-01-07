@@ -1,0 +1,19 @@
+.random_picture {
+  height: auto;
+  width: auto;
+}
+
+.catch-message {
+  text-align: center;
+  color: grey;
+  font-size: 23px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.navbar {
+  height: auto;
+  font-size: 20px;
+  font-family: 'Pacifico';
+  color: #410BAC;
+  padding-left: 7px;
+}
