@@ -18,6 +18,6 @@ class Pet
   end
 
   def city_state(pet_data)
-    pet_data["contact"]["city"]["$t"] + pet_data["contact"]["state"]["$t"]
+    pet_data["contact"]["city"]["$t"] + ' ' + pet_data["contact"]["state"]["$t"]
   end
 end
