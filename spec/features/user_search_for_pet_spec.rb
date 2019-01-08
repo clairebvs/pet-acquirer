@@ -7,8 +7,9 @@ describe 'user visits the home page' do
     click_button 'Search Your Pet'
 
     expect(current_path).to eq('/pet_search')
-    expect(page).to have_field("Animal")
-    expect(page).to have_field("Breed")
-    expect(page).to have_field("Age")
+    expect(page).to have_field("location")
+    expect(page).to have_field("animal")
+    expect(page).to have_field("age")
+    expect(page).to have_field("size")
   end
 end
