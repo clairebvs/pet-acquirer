@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user visits the home page' do
-  it 'can click on a search button to go to a search pet page' do
+  xit 'can click on a search button to go to a search pet page' do
     visit root_path
 
     click_button 'Search Your Pet'
@@ -30,7 +30,6 @@ describe 'user visits the home page' do
   it 'fill the form but not location field' do
     visit '/pet_search'
 
-    fill_in :location, with: ''
     select "cat", :from => "animal"
     click_on "Submit"
 
