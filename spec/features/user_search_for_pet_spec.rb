@@ -17,6 +17,8 @@ describe 'user visits the home page' do
     select "dog", :from => "animal"
     click_on "Submit"
 
+    expect(current_path).to eq('/pet_find')
+
     expect(page).to have_css(".pet")
 
     within(first(".pet")) do

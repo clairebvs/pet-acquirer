@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :pet_search, only: [:index, :create]
+  resources :pet_find, only: [:index]
 end
