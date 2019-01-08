@@ -2,13 +2,13 @@
   <%= label_tag(:q, "Location") %>
   <%= text_field_tag(:location)%>
 
-  <%= label_tag(:q, "Animal:") %>
+  <%= label_tag(:animal, "Animal:") %>
   <%= select_tag "animal", options_for_select(['Dog', 'Cat', 'Bird', 'Horse', 'Reptile'])%>
 
-  <%= label_tag(:q, "Age:") %>
+  <%= label_tag(:age, "Age:") %>
   <%= select_tag "age", options_for_select(['Baby', 'Young', 'Adult', 'Senior'])%>
 
-  <%= label_tag(:q, "Size:") %>
+  <%= label_tag(:size, "Size:") %>
   <%= select_tag "size", options_for_select(['S', 'M', 'L', 'XL'])%>
 
   <%= submit_tag("Submit") %>
