@@ -11,5 +11,14 @@ describe 'user visits the home page' do
     expect(page).to have_field("animal")
     expect(page).to have_field("age")
     expect(page).to have_field("size")
+
+    expect(page).to have_css(".pet")
+
+    within(first(".pet")) do
+      expect(page).to have_css('.name')
+      expect(page).to have_css('.age')
+      expect(page).to have_css('.size')
+      expect(page).to have_css('.city-state')
+    end
   end
 end
