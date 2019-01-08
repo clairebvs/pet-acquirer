@@ -7,6 +7,11 @@ describe 'user visits the home page' do
     click_button 'Search Your Pet'
 
     expect(current_path).to eq('/pet_search')
+
+    fill_in :location, with: 80111
+    select "Dog", :from => "animal"
+    click_on "Submit"
+
     expect(page).to have_field("location")
     expect(page).to have_field("animal")
     expect(page).to have_field("age")
