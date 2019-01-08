@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user visits the home page' do
-  it 'can click on a search button to go to a search pet page' do
+  xit 'can click on a search button to go to a search pet page' do
     visit root_path
 
     click_button 'Search Your Pet'
@@ -25,5 +25,14 @@ describe 'user visits the home page' do
       expect(page).to have_css('.size')
       expect(page).to have_css('.city-state')
     end
+  end
+
+  it 'fill the form but not location field' do
+    visit '/pet_search'
+
+    select "cat", :from => "animal"
+    click_on "Submit"
+
+    expect(page).to have_content('Location and Animal fields are required')
   end
 end

@@ -1,7 +1,12 @@
 class PetSearchController < ApplicationController
   def index
     if params["location"]
-      @pet_find = PetFacade.new(pet_search_params).pet_found
+      if params["location"].present?
+        @pet_find = PetFacade.new(pet_search_params).pet_found
+      else
+        flash.now[:notice] = "Location cannot be empty"
+        render 'index'
+      end
     end
   end
 
