@@ -1,4 +1,4 @@
-<%= form_tag("/pet_search", method: "post") do %>
+<%= form_tag("/pet_search", method: "get") do %>
   <%= label_tag(:q, "Location") %>
   <%= text_field_tag(:location)%>
 
@@ -14,6 +14,8 @@
   <%= submit_tag("Submit") %>
 <% end %>
 
-<%  @pet_find.each do |e| %>
-  <%= e.name %>
+<% unless @pet_find.nil? %>
+  <%  @pet_find.each do |e| %>
+    <%= e.name %>
+  <% end %>
 <% end %>
