@@ -26,4 +26,14 @@ describe 'user visits the home page' do
       expect(page).to have_css('.city-state')
     end
   end
+
+  it 'fill the form but not location field' do
+    visit '/pet_search'
+
+    fill_in :location, with: ''
+    select "cat", :from => "animal"
+    click_on "Submit"
+
+    expect(page).to have_content('Location and Animal fields are required')
+  end
 end
