@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Pet do
   let(:pet_data) {
-    [
                 {
                     "options": {
                         "option": {
