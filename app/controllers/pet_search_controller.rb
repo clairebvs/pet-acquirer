@@ -1,9 +1,8 @@
 class PetSearchController < ApplicationController
   def index
-  end
-
-  def create
-    @pet_find = PetFacade.new(pet_search_params).pet_found
+    if params["location"]
+      @pet_find = PetFacade.new(pet_search_params).pet_found
+    end
   end
 
   private
