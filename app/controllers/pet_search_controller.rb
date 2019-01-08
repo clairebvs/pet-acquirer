@@ -1,5 +1,4 @@
 class PetSearchController < ApplicationController
-
-  def index 
+  def index
   end
 end

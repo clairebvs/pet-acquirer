@@ -40,25 +40,25 @@ describe Picture do
 }
 
   subject { Picture.new(picture_data) }
-  it "exists" do
+  xit "exists" do
     expect(subject).to be_a(Picture)
   end
 
   context "instance methods" do
     context "#name" do
-      it "returns a name" do
+      xit "returns a name" do
         expect(subject.name).to eq("Duke")
       end
     end
 
     context "#photo" do
-      it "returns a photo url" do
+      xit "returns a photo url" do
         expect(subject.photo).to eq("http://photos.petfinder.com/photos/pets/42878117/1/?bust=1538149801&width=500&-x.jpg")
       end
     end
 
     context "#breed" do
-      it "returns a breed name" do
+      xit "returns a breed name" do
         expect(subject.breed).to eq("German Shepherd Dog")
       end
     end
