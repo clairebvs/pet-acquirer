@@ -13,3 +13,7 @@
 
   <%= submit_tag("Submit") %>
 <% end %>
+
+<%  @pet_find.each do |e| %>
+  <%= e.name %>
+<% end %>
