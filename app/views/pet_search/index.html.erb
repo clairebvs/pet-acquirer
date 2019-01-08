@@ -17,10 +17,11 @@
 <div class='pet'>
   <% unless @pet_find.nil? %>
     <%  @pet_find.each do |e| %>
+    <p class='photo'><img class='pet-pic' src="<%= e.photo %>" alt="Pet picture"></p>
       <p class='name'><%= e.name %></p>
-      <p class='age'></p>
-      <p class='size'></p>
-      <p class='city-state'></p>
+      <p class='age'> <%= e.age %> </p>
+      <p class='size'> <%= e.size %> </p>
+      <p class='city-state'> <%= e.location %> </p>
     <% end %>
   <% end %>
 </div>
