@@ -1,0 +1,26 @@
+<%= form_tag("/pet_search", method: "get") do %>
+  <%= label_tag(:q, "Location") %>
+  <%= text_field_tag(:location)%>
+
+  <%= label_tag(:animal, "Animal:") %>
+  <%= select_tag "animal", options_for_select(['dog', 'cat', 'bird', 'horse', 'reptile'])%>
+
+  <%= label_tag(:age, "Age:") %>
+  <%= select_tag "age", options_for_select(['', 'Baby', 'Young', 'Adult', 'Senior'])%>
+
+  <%= label_tag(:size, "Size:") %>
+  <%= select_tag "size", options_for_select(['', 'S', 'M', 'L', 'XL'])%>
+
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<div class='pet'>
+  <% unless @pet_find.nil? %>
+    <%  @pet_find.each do |e| %>
+      <p class='name'><%= e.name %></p>
+      <p class='age'></p>
+      <p class='size'></p>
+      <p class='city-state'></p>
+    <% end %>
+  <% end %>
+</div>

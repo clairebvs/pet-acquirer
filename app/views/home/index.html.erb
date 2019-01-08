@@ -1,7 +1,7 @@
 <div class='hero'>
   <div class='hero-inner'>
     <h1 class='catch-message'>Where Pets Adopt People Like You</h1>
-    <button class='search-button'>Search Your Pet</button>
+    <button class='search-button'><%= button_to 'Search Your Pet', pet_search_index_path, method: :get %></button>
     <div class='search-card'>
     </div>
   </div>
