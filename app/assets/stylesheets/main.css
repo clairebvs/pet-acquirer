@@ -49,7 +49,6 @@ background {
   margin-top: 10px;
   background-color: #410BAC;
   border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -58,4 +57,9 @@ background {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+input {
+  color: white;
+  font-size: 14px;
 }
