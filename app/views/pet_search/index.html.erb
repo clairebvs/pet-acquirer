@@ -14,8 +14,13 @@
   <%= submit_tag("Submit") %>
 <% end %>
 
-<% unless @pet_find.nil? %>
-  <%  @pet_find.each do |e| %>
-    <%= e.name %>
+<div class='pet'>
+  <% unless @pet_find.nil? %>
+    <%  @pet_find.each do |e| %>
+      <p class='name'><%= e.name %></p>
+      <p class='age'></p>
+      <p class='size'></p>
+      <p class='city-state'></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
