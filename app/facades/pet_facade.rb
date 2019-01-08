@@ -8,7 +8,7 @@ class PetFacade
     @conn = Faraday.new(url: "http://api.petfinder.com") do |faraday|
       faraday.adapter Faraday.default_adapter
     end
-    
+
     response = @conn.get("/pet.find?key=#{api_key}&format=json&location=#{@pet_params["location"]}&animal=#{@pet_params["animal"]}")
 
     results = JSON.parse(response.body)["petfinder"]["pets"]["pet"]
