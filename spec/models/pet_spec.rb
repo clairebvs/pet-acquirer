@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Pet do
   let(:pet_data) {
-    [
                 {
                     "options": {
                         "option": {
@@ -109,7 +108,6 @@ describe Pet do
                         "$t": "Dog"
                     }
                 }
-              ]
             }
   subject { Pet.new(pet_data) }
 
