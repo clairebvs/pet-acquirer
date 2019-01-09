@@ -111,32 +111,32 @@ describe Pet do
             }
   subject { Pet.new(pet_data) }
 
-    xit "exists" do
+    it "exists" do
       expect(subject).to be_a(Pet)
     end
 
     context "instance methods" do
       context "#name" do
-        xit "returns a name" do
-          expect(subject.name).to eq("MAYA")
+        it "returns a name" do
+          expect(subject.name).to eq("No name")
         end
       end
 
       context "#photo" do
-        xit "returns a photo url" do
-          expect(subject.photo).to eq("http://photos.petfinder.com/photos/pets/43688264/1/?bust=1546603621&width=60&-pnt.jpg")
+        it "returns a photo url" do
+          expect(subject.photo).to eq("No pictures")
         end
       end
 
       context "#age" do
-        xit "returns an age" do
-          expect(subject.age).to eq("Adult")
+        it "returns an age" do
+          expect(subject.age).to eq("No age")
         end
       end
 
       context "#size" do
-        xit "returns a size" do
-          expect(subject.size).to eq("L")
+        it "returns a size" do
+          expect(subject.size).to eq("No size")
         end
       end
     end

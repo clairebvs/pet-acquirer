@@ -8,7 +8,9 @@ class Picture
   end
 
   def photo_check(picture_data)
-    if picture_data["media"]["photos"]["photo"].class == Array
+    if !picture_data["media"].present?
+      "http://photos.petfinder.com/photos/pets/43526885/1/?bust=1546876745&width=60&-pnt.jpg"
+    elsif picture_data["media"]["photos"]["photo"].class == Array
       picture_data["media"]["photos"]["photo"][0]["$t"]
     else
       picture_data["media"]["photos"]["photo"]["$t"]
@@ -16,7 +18,9 @@ class Picture
   end
 
   def breed_check(picture_data)
-    if picture_data["breeds"]["breed"].class == Array
+    if !picture_data["breeds"].present?
+      'Unknown'
+    elsif picture_data["breeds"]["breed"].class == Array
       picture_data["breeds"]["breed"][0]["$t"]
     else
       picture_data["breeds"]["breed"]["$t"]
