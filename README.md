@@ -1,24 +1,42 @@
-# README
+# MyPetAcquirer - README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Introduction
+MyPetAcquirer is a rails monolith web application that helps you find your new companion based on various filters. If you are a pet lover this application is for you as it will allow to see different pet picture and search for a pet based on your search.
 
-Things you may want to cover:
+* Initial Setup
+Clone this repo using SSH or HTTP and run ``` bundle ```.
+You will also need to get an api key for the PetFinder api. Use figaro to hide it in an application.yml file and set the key equal to ``` pet_api_key ```.
 
-* Ruby version
+* Running Tests
+To run the test suite, once you have followed the Initial Setup rubric, run ``` rspec ``` and you will be able to see the test coverage.
 
-* System dependencies
+* How to use
+When being on the home page, you can click the search button and start to search for your future pet. Only the location and animal are required field. The location must be either a valid zip code or a state and a city.
 
-* Configuration
+* Stack used :
+Ruby 2.4.1
+Rails 5.1.6.1
+CircleCI
+Heroku
+Faraday
+Figaro
+HTML5
+CSS3
 
-* Database creation
+* Known Issues
+Will divide in the future animal before the search page so that the search page will be individualized based on the animal users are searching for.
 
-* Database initialization
+* How to Contribute
+Look at the opened issue and create a branch after cloning down the repo (see Initial Setup above).
 
-* How to run the test suite
+* Core Contributors
+Claire Beauvais / GitHub username : clairebvs
 
-* Services (job queues, cache servers, search engines, etc.)
+* Schema Design
+No database has been used for this application.
 
-* Deployment instructions
+* The Application :
 
-* ...
+![Alt text](/../master/assets/home_page.png?raw=true "Optional Title")
+
+![Alt text](/../master/assets/pet_search.png?raw=true "Optional Title")
