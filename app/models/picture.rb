@@ -18,7 +18,9 @@ class Picture
   end
 
   def breed_check(picture_data)
-    if picture_data["breeds"]["breed"].class == Array
+    if !picture_data["breeds"].present?
+      'Unknown'
+    elsif picture_data["breeds"]["breed"].class == Array
       picture_data["breeds"]["breed"][0]["$t"]
     else
       picture_data["breeds"]["breed"]["$t"]
