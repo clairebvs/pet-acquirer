@@ -63,3 +63,22 @@ input {
   color: black;
   font-size: 14px;
 }
+
+.container-card-pet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pet-item {
+  background-color: white;
+  border-radius: 8px;
+  border: 3px solid #410BAC;
+  margin-bottom: 14px;
+  height: 250px;
+  width: 250px;
+  color: #410BAC;
+  font-size: 15px;
+  text-align: center;
+}

@@ -14,19 +14,23 @@
   <%= submit_tag("Submit") %>
 <% end %>
 
-<div class='pet'>
+<div class='container-card-pet'>
   <div class="container">
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= notice %></div>
     <% end %>
   </div>
   <% unless @pet_find.nil? %>
+  <div class='row'>
     <%  @pet_find.each do |e| %>
-    <p class='photo'><img class='pet-pic' src="<%= e.photo %>" alt="Pet picture"></p>
+    <div class='pet-item'>
+      <p class='photo'><img class='pet-pic' src="<%= e.photo %>" alt="Pet picture"></p>
       <p class='name'><%= e.name %></p>
       <p class='age'> <%= e.age %> </p>
       <p class='size'> <%= e.size %> </p>
       <p class='city-state'> <%= e.location %> </p>
+    </div>
     <% end %>
+  </div>
   <% end %>
 </div>
