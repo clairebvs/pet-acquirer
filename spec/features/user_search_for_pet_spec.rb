@@ -33,7 +33,7 @@ describe 'user visits the home page' do
     select "cat", :from => "animal"
     click_on "Submit"
 
-    expect(page).to have_content('Location cannot be empty')
+    expect(page).to have_content('Location cannot be empty or is incorrect')
   end
 
   it 'fill the form but the location field is incorrect' do
