@@ -1,18 +1,20 @@
-<%= form_tag("/pet_search", method: "get") do %>
-  <%= label_tag(:q, "Location") %>
-  <%= text_field_tag(:location)%>
+<form id='pet_form'>
+  <%= form_tag("/pet_search", method: "get") do %>
+    <%= label_tag(:q, "Location") %>
+    <%= text_field_tag(:location)%>
 
-  <%= label_tag(:animal, "Animal:") %>
-  <%= select_tag "animal", options_for_select(['dog', 'cat', 'bird', 'horse', 'reptile'])%>
+    <%= label_tag(:animal, "Animal") %>
+    <%= select_tag "animal", options_for_select(['dog', 'cat', 'bird', 'horse', 'reptile'])%>
 
-  <%= label_tag(:age, "Age:") %>
-  <%= select_tag "age", options_for_select(['Baby', 'Young', 'Adult', 'Senior'])%>
+    <%= label_tag(:age, "Age") %>
+    <%= select_tag "age", options_for_select(['Baby', 'Young', 'Adult', 'Senior'])%>
 
-  <%= label_tag(:size, "Size:") %>
-  <%= select_tag "size", options_for_select(['S', 'M', 'L', 'XL'])%>
+    <%= label_tag(:size, "Size") %>
+    <%= select_tag "size", options_for_select(['S', 'M', 'L', 'XL'])%>
 
-  <%= submit_tag("Submit") %>
-<% end %>
+    <%= submit_tag("Submit") %>
+  <% end %>
+</form>
 
 <div class='container-card-pet'>
   <div class="container">
