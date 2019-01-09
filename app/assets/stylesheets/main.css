@@ -82,3 +82,8 @@ input {
   font-size: 15px;
   text-align: center;
 }
+
+.alert {
+  color: red;
+  font-weight: bold;
+}
