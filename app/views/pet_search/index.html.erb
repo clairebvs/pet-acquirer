@@ -6,10 +6,10 @@
   <%= select_tag "animal", options_for_select(['dog', 'cat', 'bird', 'horse', 'reptile'])%>
 
   <%= label_tag(:age, "Age:") %>
-  <%= select_tag "age", options_for_select(['', 'Baby', 'Young', 'Adult', 'Senior'])%>
+  <%= select_tag "age", options_for_select(['Baby', 'Young', 'Adult', 'Senior'])%>
 
   <%= label_tag(:size, "Size:") %>
-  <%= select_tag "size", options_for_select(['', 'S', 'M', 'L', 'XL'])%>
+  <%= select_tag "size", options_for_select(['S', 'M', 'L', 'XL'])%>
 
   <%= submit_tag("Submit") %>
 <% end %>
