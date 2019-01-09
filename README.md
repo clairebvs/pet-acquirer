@@ -48,4 +48,6 @@ No schema has been used for this application.
 
 ![Alt text](/../master/app/assets/images/home_page.png?raw=true "Optional Title")
 
-![Alt text](/../master/app/assets/images/pet_search.png?raw=true "Optional Title")
+![Alt text](/../master/app/assets/images/pet_form.png?raw=true "Optional Title")
+
+![Alt text](/../master/app/assets/images/pet_search_result.png?raw=true "Optional Title")
