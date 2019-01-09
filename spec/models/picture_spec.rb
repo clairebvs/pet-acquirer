@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Picture do
-  let(:picture_data) {
+  let!(:picture_data) {
     { "options": {
                 "option": [
                     {
@@ -40,26 +40,26 @@ describe Picture do
 }
 
   subject { Picture.new(picture_data) }
-  xit "exists" do
+  it "exists" do
     expect(subject).to be_a(Picture)
   end
 
   context "instance methods" do
     context "#name" do
-      xit "returns a name" do
-        expect(subject.name).to eq("Duke")
+      it "returns a name" do
+        expect(subject.name).to eq("None yet")
       end
     end
 
     context "#photo" do
-      xit "returns a photo url" do
-        expect(subject.photo).to eq("http://photos.petfinder.com/photos/pets/42878117/1/?bust=1538149801&width=500&-x.jpg")
+      it "returns a photo url" do
+        expect(subject.photo).to eq("http://photos.petfinder.com/photos/pets/43526885/1/?bust=1546876745&width=60&-pnt.jpg")
       end
     end
 
     context "#breed" do
-      xit "returns a breed name" do
-        expect(subject.breed).to eq("German Shepherd Dog")
+      it "returns a breed name" do
+        expect(subject.breed).to eq("Unknown")
       end
     end
   end
