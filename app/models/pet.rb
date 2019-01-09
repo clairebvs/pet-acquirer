@@ -3,14 +3,16 @@ class Pet
 
   def initialize(pet_data)
     @name = pet_data["name"]["$t"]
-    @photo = photo_check(pet_data)
     @size = pet_data["size"]["$t"]
     @age = pet_data["age"]["$t"]
     @location = city_state(pet_data)
+    @photo = photo_check(pet_data)
   end
 
   def photo_check(pet_data)
-    if pet_data["media"]["photos"]["photo"].class == Array
+    if pet_data["media"] == {}
+      "No pictures"
+    elsif pet_data["media"]["photos"]["photo"].class == Array
       pet_data["media"]["photos"]["photo"][0]["$t"]
     else
       pet_data["media"]["photos"]["photo"]["$t"]
