@@ -25,7 +25,7 @@
   <% unless @pet_find.nil? %>
   <div class='row'>
     <%  @pet_find.each do |e| %>
-    <div class='pet-item'>
+    <div class='pet'>
       <p class='photo'><img class='pet-pic' src="<%= e.photo %>" alt="Pet picture"></p>
       <p class='name'><%= e.name %></p>
       <p class='age'> <%= e.age %> </p>

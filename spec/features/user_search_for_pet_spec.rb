@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user visits the home page' do
-  xit 'can click on a search button to go to a search pet page' do
+  it 'can click on a search button to go to a search pet page' do
     visit root_path
 
     click_button 'Search Your Pet'
