@@ -44,10 +44,18 @@ class Pet
   end
 
   def size_check(pet_data)
-    if !pet_data["size"].present?
-      'No size'
+    if pet_data.class == Array
+      if !pet_data[0]["size"].present?
+        'No size'
+      else
+        pet_data[0]["size"]["$t"]
+      end
     else
-      pet_data["size"]["$t"]
+      if !pet_data["size"].present?
+        'No size'
+      else
+        pet_data["size"]["$t"]
+      end
     end
   end
 
