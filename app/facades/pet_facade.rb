@@ -13,7 +13,7 @@ class PetFacade
   end
 
   def pet_object
-    service.all_pets["petfinder"]["pets"]["pet"].map do |result|
+    service.all_pets["petfinder"]["pets"].map do |pet, result|
       Pet.new(result)
     end
   end
