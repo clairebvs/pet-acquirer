@@ -28,10 +28,18 @@ class Pet
   end
 
   def name_check(pet_data)
-    if !pet_data["name"].present?
-      'No name'
+    if pet_data.class == Array
+      if !pet_data[0]["name"].present?
+        'No name'
+      else
+        pet_data[0]["name"]["$t"]
+      end
     else
-      pet_data["name"]["$t"]
+      if !pet_data["name"].present?
+        'No name'
+      else
+        pet_data["name"]["$t"]
+      end
     end
   end
 
