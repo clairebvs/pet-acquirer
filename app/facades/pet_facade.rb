@@ -5,23 +5,21 @@ class PetFacade
   end
 
   def pet_found
-    @conn = Faraday.new(url: "http://api.petfinder.com") do |faraday|
-      faraday.adapter Faraday.default_adapter
-    end
-
-    response = @conn.get("/pet.find?key=#{api_key}&format=json&location=#{@pet_params["location"]}&animal=#{@pet_params["animal"]}&size=#{@pet_params["size"]}&age=#{@pet_params["age"]}")
-
-    if response.env.body.include?("Invalid")
-      "Invalid location"
-    else
-      results = JSON.parse(response.body)["petfinder"]["pets"]["pet"]
-      results.map do |result|
-        Pet.new(result)
-      end
+    if service.all_pets["petfinder"]["pets"].present?
+      pet_object
+    elsif service.all_pets["petfinder"]["header"]["status"]["message"]["$t"].include?("Invalid")
+     "Invalid location"
     end
   end
 
-  def api_key
-    ENV["pet_api_key"]
+  def pet_object
+    service.all_pets["petfinder"]["pets"].map do |pet, result|
+      Pet.new(result)
+    end
+  end
+
+
+  def service
+    PetFinderService.new(@pet_params)
   end
 end
