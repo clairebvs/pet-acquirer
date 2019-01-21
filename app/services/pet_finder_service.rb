@@ -8,7 +8,7 @@ class PetFinderService
   end
 
   def all_pets
-    get_json("/pet.find?key=#{api_key}&format=json&location=#{@pet_params["location"]}&animal=#{@pet_params["animal"]}&size=#{@pet_params["size"]}&age=#{@pet_params["age"]}")
+    get_json("pet.find?key=#{api_key}&format=json&location=#{@pet_params["location"]}&animal=#{@pet_params["animal"]}&size=#{@pet_params["size"]}&age=#{@pet_params["age"]}")
   end
 
   private
