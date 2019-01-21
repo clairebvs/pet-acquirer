@@ -60,10 +60,18 @@ class Pet
   end
 
   def age_check(pet_data)
-    if !pet_data["age"].present?
-      'No age'
+    if pet_data.class == Array
+      if !pet_data[0]["age"].present?
+        'No age'
+      else
+        pet_data[0]["age"]["$t"]
+      end
     else
-      pet_data["age"]["$t"]
+      if !pet_data["age"].present?
+        'No age'
+      else
+        pet_data["age"]["$t"]
+      end
     end
   end
 end
