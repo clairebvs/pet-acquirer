@@ -13,8 +13,14 @@ class PetFacade
   end
 
   def pet_object
-    service.all_pets["petfinder"]["pets"].map do |pet, result|
-      Pet.new(result)
+    if service.all_pets["petfinder"]["pets"]["pet"].class == Array
+      service.all_pets["petfinder"]["pets"]["pet"].map do |pet_result|
+        Pet.new(pet_result)
+      end
+    else
+      service.all_pets["petfinder"]["pets"].map do |pet, result|
+        Pet.new(result)
+      end
     end
   end
 
