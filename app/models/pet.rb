@@ -10,86 +10,44 @@ class Pet
   end
 
   def photo_check(pet_data)
-    if pet_data.class == Array
-      if !pet_data[0]["media"].present?
-        "No pictures"
-      elsif pet_data[0]["media"]["photos"]["photo"].class == Array
-        pet_data[0]["media"]["photos"]["photo"][0]["$t"]
-      else
-        pet_data[0]["media"]["photos"]["photo"]["$t"]
-      end
+    if !pet_data["media"].present?
+      "No pictures"
+    elsif pet_data["media"]["photos"]["photo"].class == Array
+      pet_data["media"]["photos"]["photo"][0]["$t"]
     else
-      if !pet_data["media"].present?
-        "No pictures"
-      elsif pet_data["media"]["photos"]["photo"].class == Array
-        pet_data["media"]["photos"]["photo"][0]["$t"]
-      else
-        pet_data["media"]["photos"]["photo"]["$t"]
-      end
+      pet_data["media"]["photos"]["photo"]["$t"]
     end
   end
 
   def city_state(pet_data)
-    if pet_data.class == Array
-      if !pet_data[0]["contact"].present?
-        'No location'
-      else
-        pet_data[0]["contact"]["city"]["$t"] + ' ' + pet_data[0]["contact"]["state"]["$t"]
-      end
+    if !pet_data["contact"].present?
+      'No location'
     else
-      if !pet_data["contact"].present?
-        'No location'
-      else
-        pet_data["contact"]["city"]["$t"] + ' ' + pet_data["contact"]["state"]["$t"]
-      end
+      pet_data["contact"]["city"]["$t"] + ' ' + pet_data["contact"]["state"]["$t"]
     end
   end
 
   def name_check(pet_data)
-    if pet_data.class == Array
-      if !pet_data[0]["name"].present?
-        'No name'
-      else
-        pet_data[0]["name"]["$t"]
-      end
+    if !pet_data["name"].present?
+      'No name'
     else
-      if !pet_data["name"].present?
-        'No name'
-      else
-        pet_data["name"]["$t"]
-      end
+      pet_data["name"]["$t"]
     end
   end
 
   def size_check(pet_data)
-    if pet_data.class == Array
-      if !pet_data[0]["size"].present?
-        'No size'
-      else
-        pet_data[0]["size"]["$t"]
-      end
+    if !pet_data["size"].present?
+      'No size'
     else
-      if !pet_data["size"].present?
-        'No size'
-      else
-        pet_data["size"]["$t"]
-      end
+      pet_data["size"]["$t"]
     end
   end
 
   def age_check(pet_data)
-    if pet_data.class == Array
-      if !pet_data[0]["age"].present?
-        'No age'
-      else
-        pet_data[0]["age"]["$t"]
-      end
+    if !pet_data["age"].present?
+      'No age'
     else
-      if !pet_data["age"].present?
-        'No age'
-      else
-        pet_data["age"]["$t"]
-      end
+      pet_data["age"]["$t"]
     end
   end
 end
